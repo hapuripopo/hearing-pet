@@ -1,0 +1,22 @@
+.MainNavbar {
+    position: fixed;
+    width: 100%;
+    background-color: #C5E3FB;
+    text-align: center;
+    
+}
+
+.MainNavbar__wrapper {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1060px;
+    height: 50px;
+    justify-content: center;
+}
+
+.MainNavbar__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
