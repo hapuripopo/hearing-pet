@@ -6,3 +6,33 @@
     position: relative;
     padding-top: 30px;
 }
+
+.SearchInput {
+    max-width: 700px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.SearchInput {
+    position: relative;
+    display: flex;
+    padding: 0 30px;
+}
+
+.SearchInput__input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius:30px;
+    background: rgb(197, 227, 251);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.SearchInput__button {
+    position: absolute;
+    color: currentColor;
+    right: 46px;
+    top: 16px;
+    z-index: 1;
+}
+
