@@ -1,11 +1,30 @@
+import { useEffect } from "react";
+import axios from "axios";
+
 import "./style.css";
+
 import Header from "../../components/Header";
 import KakaoMap from "../../components/KakaoMap";
-import { ReactComponent as Search } from "../../assets/icons/search.svg";
 import HospitalCard from "./components/HospitalCard";
+
+import { ReactComponent as Search } from "../../assets/icons/search.svg";
 
 
 export default function Main() {
+
+    useEffect(()=> {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(
+                    "https://openapi.gg.go.kr/OTHERHALFANIMEDIWELF?Type=json"
+                );
+                console.log(response.data.OTHERHALFANIMEDIWELF[1].row);
+            } catch (e) {
+                console.log(e);
+            }
+        }
+        fetchData();
+    }, []);
 
     return (
         <>

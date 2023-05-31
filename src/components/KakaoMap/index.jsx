@@ -12,6 +12,11 @@ export default function KakaoMap() {
             level: 5 //지도의 레벨(확대, 축소 정도)
         }
         const map = new kakao.maps.Map(container, option);
+
+        const marker = new kakao.maps.Marker({
+            position: new kakao.maps.LatLng(37.577780, 126.981739),
+            map: map
+        });
     }, [])
 
     return(
