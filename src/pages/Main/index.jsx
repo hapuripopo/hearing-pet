@@ -2,6 +2,7 @@ import "./style.css";
 import Header from "../../components/Header";
 import KakaoMap from "../../components/KakaoMap";
 import { ReactComponent as Search } from "../../assets/icons/search.svg";
+import HospitalCard from "./components/HospitalCard";
 
 
 export default function Main() {
@@ -30,41 +31,9 @@ export default function Main() {
 
                 <div className="CardContainer">
                     <ul className="CardList">
-                        {/* 컴포넌트로 분리 - 시작 */}
-                        <li>
-                            <div className="Card">
-                                <div className="Card__Name">
-                                    <p>
-                                        {"동물 병원 이름"}
-                                    </p>
-
-                                    <p>
-                                        {"동물병원/약국"}
-                                    </p>
-                                </div>
-
-                                <div className="Card__address">
-                                    <p>
-                                        {"주소"}
-                                    </p>
-
-                                    <p>
-                                        {"상세주소"}
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        {/* 컴포넌트로 분리 - 끝 */}
-                        <li>
-                            <div className="Card">
-                                dd
-                            </div>
-                        </li>
-                        <li>
-                            <div className="Card">
-                                dd
-                            </div>
-                        </li>
+                        <HospitalCard />
+                        <HospitalCard />
+                        <HospitalCard />
                     </ul>
                 </div>
             </main>

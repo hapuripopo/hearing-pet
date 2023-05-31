@@ -71,25 +71,45 @@
 
 .Card {
     width: 100%;
-    height: 176px;
+    height: 160px;
+    padding: 20px 25px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid rgb(177, 177, 177);
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 16px;
+}
+
+.Card__name {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.Card__name--title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    left: -2px;
 }
 
 .Card__address {
-    display: flex;
+    width: 50%;
+    text-align: center;
+    word-break: keep-all;
+    padding-left: 20px;
+    font-size: 17px;
 }
 
 .Card__address::before {
-    display: inline-block;
     content: "";
-    width: 1px;
-    height: 20px;
-    background-color: #e1e2e3;
-    margin: auto 10px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 264px;
+    height: 120px;
+    border-left: 1px solid rgb(177, 177, 177);
 }
+
