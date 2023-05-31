@@ -15,8 +15,6 @@ export default function KakaoMap() {
     }, [])
 
     return(
-        <div className="wrapper">
-            <div id="map"></div>
-        </div>
+        <div id="map"></div>
     );
 }
