@@ -3,7 +3,7 @@
     width: 100%;
     background-color: #C5E3FB;
     text-align: center;
-    
+    z-index: 100;
 }
 
 .MainNavbar__wrapper {
