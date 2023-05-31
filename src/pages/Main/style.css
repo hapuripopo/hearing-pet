@@ -32,6 +32,8 @@
     border-radius:30px;
     background: rgb(197, 227, 251);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
 }
 
 .SearchInput__input:focus {
