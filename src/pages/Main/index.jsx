@@ -2,6 +2,7 @@ import "./style.css";
 import Header from "../../components/Header";
 import KakaoMap from "../../components/KakaoMap";
 import { ReactComponent as Search } from "../../assets/icons/search.svg";
+import HospitalCard from "./components/HospitalCard";
 
 
 export default function Main() {
@@ -27,6 +28,14 @@ export default function Main() {
                         </button>
                     </div>
                 </section>
+
+                <div className="CardContainer">
+                    <ul className="CardList">
+                        <HospitalCard />
+                        <HospitalCard />
+                        <HospitalCard />
+                    </ul>
+                </div>
             </main>
         </>
     );

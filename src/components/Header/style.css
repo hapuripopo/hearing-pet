@@ -1,9 +1,10 @@
 .MainNavbar {
     position: fixed;
     width: 100%;
+    z-index: 100;
+    border: #fff solid 1px;
     background-color: #C5E3FB;
     text-align: center;
-    
 }
 
 .MainNavbar__wrapper {

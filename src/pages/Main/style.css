@@ -2,8 +2,13 @@
     padding-top: 50px;
 }
 
+/* Search */
+
 .SearchSection {
-    position: relative;
+    display: block;
+    max-width: 87.72%;
+    width: 1080px;
+    margin: 0 auto;
     padding-top: 30px;
 }
 
@@ -22,17 +27,89 @@
 .SearchInput__input {
     height: 50px;
     width: 100%;
+    padding: 0 50px;
     border: none;
     border-radius:30px;
     background: rgb(197, 227, 251);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
+}
+
+.SearchInput__input:focus {
+    outline: none;
 }
 
 .SearchInput__button {
     position: absolute;
     color: currentColor;
     right: 46px;
-    top: 16px;
+    top: 15px;
     z-index: 1;
+}
+
+/* Card */
+
+.CardContainer {
+    max-width: 1080px;
+    width: 87.72%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.CardList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px 20px;
+}
+
+.CardList > li {
+    position: relative;
+    width: calc(50% - 10px);
+}
+
+.Card {
+    width: 100%;
+    height: 160px;
+    padding: 20px 25px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.Card__name {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.Card__name--title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    left: -2px;
+}
+
+.Card__address {
+    width: 50%;
+    text-align: center;
+    word-break: keep-all;
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+.Card__address::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 264px;
+    height: 120px;
+    border-left: 1px solid rgb(177, 177, 177);
 }
 
