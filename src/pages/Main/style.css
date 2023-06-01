@@ -106,9 +106,8 @@
 .Card__address::before {
     content: "";
     position: absolute;
-    right: 0;
     top: 20px;
-    right: 264px;
+    right: 50%;
     height: 120px;
     border-left: 1px solid rgb(177, 177, 177);
 }
