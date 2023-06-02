@@ -27,6 +27,7 @@ export default function Main() {
                         KEY: API_KEY,
                         TYPE: "json",
                         pIndex: hIndex,
+                        SIGNGU_NM: "용인시"
                     },
                 });
 
