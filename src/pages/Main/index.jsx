@@ -8,6 +8,7 @@ import HospitalCard from "./components/HospitalCard";
 import { ReactComponent as Search } from "../../assets/icons/search.svg";
 
 import "./style.css";
+import SearchNone from "../../assets/images/search_none.png";
 
 
 export default function Main() {
@@ -25,6 +26,7 @@ export default function Main() {
                         KEY: API_KEY,
                         TYPE: "json",
                         pIndex: "1",
+
                     },
                 });
 
@@ -63,7 +65,7 @@ export default function Main() {
                     <ul className="CardList">
                         {
                         
-                            hospitalDatas.length > 0 && (
+                            hospitalDatas.length > 0 ? (
                                 hospitalDatas.map(data => {
                                     return (
                                         <HospitalCard
@@ -73,6 +75,13 @@ export default function Main() {
                                         />
                                     );
                                 })
+                            ) : (
+                                <div className="CardList__none">
+                                    <img src={SearchNone} alt="검색결과 없음" width={128} />
+                                    <p>
+                                        검색결과가 존재하지 않습니다.
+                                    </p>
+                                </div>
                             )
                         }
                     </ul>
