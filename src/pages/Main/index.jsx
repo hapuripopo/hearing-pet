@@ -17,6 +17,7 @@ export default function Main() {
 
     const [hospitalDatas, setHospitalDatas] = useState([]);
     const [hIndex, setHIndex] = useState(1);
+    const [search, setSearch] = useState("");
 
     // 병원/약국 정보를 가져옵니다.
     useEffect(()=> {
@@ -26,8 +27,7 @@ export default function Main() {
                     params: {
                         KEY: API_KEY,
                         TYPE: "json",
-                        pIndex: hIndex,
-                        SIGNGU_NM: "용인시"
+                        pIndex: hIndex
                     },
                 });
 

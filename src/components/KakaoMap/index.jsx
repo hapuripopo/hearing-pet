@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Modal } from "react-bootstrap";
 
 import mapMarker from "../../assets/images/map_marker.png";
 import "./style.css";
@@ -9,7 +10,8 @@ const { kakao } = window;
 
 export default function KakaoMap({ markData }) {
     const [center, setCenter] = useState(new kakao.maps.LatLng(37.3067600253, 127.0846083156));
-    
+    const [showInfo, setShowInfo] = useState(false);
+
     useEffect(() => {
         // 지도 생성
         const container = document.getElementById("map");
@@ -36,14 +38,37 @@ export default function KakaoMap({ markData }) {
                 const marker = new kakao.maps.Marker({
                     map: map,
                     position: position,
-                    image: markerImg
+                    image: markerImg,
+                    clickable: true
                 });
+
+                // 마커 클릭 이벤트
+                kakao.maps.event.addListener(marker, 'click', function() {
+                    setShowInfo(true);
+              });
             })
         }
 
     }, [markData]);
 
     return(
-        <div id="map"></div>
+        <>
+            <div id="map"></div>
+            <div>
+                <Modal
+                    show={showInfo}
+                    onHide={() => setShowInfo(false)}
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    >
+                    <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                </Modal>
+            </div>
+        </>
+
     );
 }
