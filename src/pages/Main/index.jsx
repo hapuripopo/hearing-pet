@@ -16,6 +16,7 @@ export default function Main() {
     const API_URL = "https://openapi.gg.go.kr/OTHERHALFANIMEDIWELF";
 
     const [hospitalDatas, setHospitalDatas] = useState([]);
+    const [hIndex, setHIndex] = useState(1);
 
     // 병원/약국 정보를 가져옵니다.
     useEffect(()=> {
@@ -25,8 +26,7 @@ export default function Main() {
                     params: {
                         KEY: API_KEY,
                         TYPE: "json",
-                        pIndex: "1",
-
+                        pIndex: hIndex,
                     },
                 });
 
@@ -37,7 +37,7 @@ export default function Main() {
             }
         }
         fetchData();
-    }, []);
+    }, [hIndex]);
 
     return (
         <>
@@ -45,7 +45,7 @@ export default function Main() {
 
             <main className="Main">
                 <section className="SearchSection">
-                    <KakaoMap />
+                    <KakaoMap markData={hospitalDatas} />
 
                     <div className="SearchInput">
                         <input
@@ -72,6 +72,8 @@ export default function Main() {
                                             hName = {data.CMPNM_NM}
                                             hType = {data.INDUTYPE_NM}
                                             address = {data.LOCPLC_ROADNM_ADDR}
+                                            mapLat = {data.REFINE_WGS84_LAT}
+                                            mapLogt = {data.REFINE_WGS84_LOGT}
                                         />
                                     );
                                 })
